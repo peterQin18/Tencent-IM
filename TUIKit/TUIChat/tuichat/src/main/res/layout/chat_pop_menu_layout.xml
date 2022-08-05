@@ -20,7 +20,8 @@
         android:layout_height="0.96dp"
         android:layout_marginLeft="20.16dp"
         android:layout_marginRight="20.16dp"
-        android:background="#E5E5E5"/>
+        android:background="#E5E5E5"
+        android:visibility="gone"/>
 
     <LinearLayout
         android:id="@+id/face_grid_ll"

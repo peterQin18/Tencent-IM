@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tencent.imsdk:imsdk-plus:6.3.2609@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bbc5dc44f0befaba7c2742495c7e6acb/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bbc5dc44f0befaba7c2742495c7e6acb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bbc5dc44f0befaba7c2742495c7e6acb/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.imsdk/imsdk-plus/6.3.2609/386e38b18917088298a6465e8092282e4d7c8043/imsdk-plus-6.3.2609-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

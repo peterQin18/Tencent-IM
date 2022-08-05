@@ -149,7 +149,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
     private String mInputContent;
     private OnStartActivityListener mStartActivityListener;
 
-    private Map<String,String> atUserInfoMap = new HashMap<>();
+    private Map<String, String> atUserInfoMap = new HashMap<>();
     private String displayInputString;
 
     private ChatPresenter presenter;
@@ -160,6 +160,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
     private ImageView replyCloseBtn;
     private ReplyPreviewBean replyPreviewBean;
     private boolean isShowCustomFace = true;
+
     public InputView(Context context) {
         super(context);
         initViews();
@@ -337,8 +338,8 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
         });
     }
 
-    public void addInputText(String name, String id){
-        if (id == null || id.isEmpty()){
+    public void addInputText(String name, String id) {
+        if (id == null || id.isEmpty()) {
             return;
         }
 
@@ -369,8 +370,8 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
         }
     }
 
-    public void updateInputText(ArrayList<String> names, ArrayList<String> ids){
-        if (ids == null || ids.isEmpty()){
+    public void updateInputText(ArrayList<String> names, ArrayList<String> ids) {
+        if (ids == null || ids.isEmpty()) {
             return;
         }
 
@@ -430,7 +431,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
         return displayNameList;
     }
 
-    private void updateAtUserInfoMap(ArrayList<String> names, ArrayList<String> ids){
+    private void updateAtUserInfoMap(ArrayList<String> names, ArrayList<String> ids) {
         displayInputString = "";
 
         for (int i = 0; i < ids.size(); i++) {
@@ -448,7 +449,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
             }
         }
 
-        if(!displayInputString.isEmpty()) {
+        if (!displayInputString.isEmpty()) {
             displayInputString = displayInputString.substring(0, displayInputString.length() - 1);
         }
     }
@@ -478,13 +479,13 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
             @Override
             public void onSuccess(Object data) {
                 TUIChatLog.i(TAG, "onSuccess: " + data);
-                if (data == null){
+                if (data == null) {
                     TUIChatLog.e(TAG, "data is null");
                     return;
                 }
 
                 String uri = data.toString();
-                if (TextUtils.isEmpty(uri)){
+                if (TextUtils.isEmpty(uri)) {
                     TUIChatLog.e(TAG, "uri is empty");
                     return;
                 }
@@ -496,17 +497,17 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
                     TUIChatLog.e(TAG, "mimeType is empty.");
                     return;
                 }
-                if (mimeType.contains("video")){
+                if (mimeType.contains("video")) {
                     String videoPath = FileUtil.getPathFromUri((Uri) data);
                     TUIMessageBean msg = buildVideoMessage(videoPath);
-                    if (msg == null){
+                    if (msg == null) {
                         ToastUtil.toastShortMessage(getResources().getString(R.string.send_failed_file_not_exists));
                         TUIChatLog.e(TAG, "start send video error data: " + data);
                     } else if (mMessageHandler != null) {
                         mMessageHandler.sendMessage(msg);
                         hideSoftInput();
                     }
-                } else if (mimeType.contains("image")){
+                } else if (mimeType.contains("image")) {
                     TUIMessageBean info = ChatMessageBuilder.buildImageMessage((Uri) data);
                     if (info == null) {
                         TUIChatLog.e(TAG, "start send image error data: " + data);
@@ -537,7 +538,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
             String sDuration = mmr.extractMetadata(android.media.MediaMetadataRetriever.METADATA_KEY_DURATION);//时长(毫秒)
             Bitmap bitmap = mmr.getFrameAtTime(0, android.media.MediaMetadataRetriever.OPTION_NEXT_SYNC);//缩略图
 
-            if (bitmap == null){
+            if (bitmap == null) {
                 TUIChatLog.e(TAG, "buildVideoMessage() bitmap is null");
                 return null;
             }
@@ -846,7 +847,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
     // 兼容有导航键的情况
     private int getNavigateBarHeight() {
         DisplayMetrics metrics = new DisplayMetrics();
-        WindowManager windowManager  = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
+        WindowManager windowManager = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
         windowManager.getDefaultDisplay().getMetrics(metrics);
         int usableHeight = metrics.heightPixels;
         windowManager.getDefaultDisplay().getRealMetrics(metrics);
@@ -1376,7 +1377,6 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
     }
 
 
-
     public void exitReply() {
         isReplyModel = false;
         replyPreviewBean = null;
@@ -1400,6 +1400,7 @@ public class InputView extends LinearLayout implements View.OnClickListener, Tex
 
     public interface MessageHandler {
         void sendMessage(TUIMessageBean msg);
+
         void scrollToEnd();
     }
 

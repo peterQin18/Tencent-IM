@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tencent.tpns:vivo:1.3.3.3-release@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25ab3569f22ea9395bde4719796f093f/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25ab3569f22ea9395bde4719796f093f/jars/libs/tpns-vivo-1.3.3.3.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25ab3569f22ea9395bde4719796f093f/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/25ab3569f22ea9395bde4719796f093f/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -109,7 +109,7 @@ public abstract class MessageContentHolder extends MessageBaseHolder {
             //// 头像设置
             if (msg.isSelf()) {
                 leftUserIcon.setVisibility(View.GONE);
-                rightUserIcon.setVisibility(View.VISIBLE);
+                rightUserIcon.setVisibility(View.GONE);
             } else {
                 leftUserIcon.setVisibility(View.VISIBLE);
                 rightUserIcon.setVisibility(View.GONE);

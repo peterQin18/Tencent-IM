@@ -48,7 +48,7 @@ public class CustomLinkMessageHolder extends MessageContentHolder {
             linkView.setTextColor(textView.getResources().getColor(TUIThemeManager.getAttrResId(textView.getContext(), R.attr.chat_self_custom_msg_link_color)));
         }
 
-        textView.setText(text);
+        textView.setText("仲裁理由：买方提交的付款证明真实有效，订单仲裁完成。");
         msgContentFrame.setClickable(true);
         String finalLink = link;
         msgContentFrame.setOnClickListener(new View.OnClickListener() {

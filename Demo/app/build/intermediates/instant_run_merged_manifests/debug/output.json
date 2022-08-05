@@ -1,0 +1,1 @@
+[{"outputType":{"type":"INSTANT_RUN_MERGED_MANIFESTS"},"apkData":{"type":"MAIN","splits":[],"versionCode":1,"versionName":"6.3.2609","enabled":true,"outputFile":"TUIKitDemo-debug.apk","fullName":"debug","baseName":"debug"},"path":"AndroidManifest.xml","properties":{"packageId":"com.tencent.qcloud.tim.tuikit","split":"","minSdkVersion":"19"}}]

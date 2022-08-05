@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tencent.qcloud.tim.tuikit"
+    android:versionCode="1"
+    android:versionName="6.3.2609" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.tencent.qcloud.tim.demo.DemoApplication"
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
+        <activity
+            android:name="com.tencent.qcloud.tim.demo.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.qcloud.tim.demo.login.LoginForDevActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tim.demo.main.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+
+            <!-- 离线推送打开应用内页面 -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.tencent.qcloud"
+                    android:path="/detail"
+                    android:scheme="pushscheme" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="com.tencent.qcloud.tim.demo.LanguageReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.tencent.qcloud.tim.demo.profile.SelfDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tim.demo.profile.AboutIMActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tim.demo.login.ThemeSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tim.demo.login.LanguageSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuiconversation.ui.page.TUIForwardSelectActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.tencent.qcloud.tuikit.tuiconversation.TUIConversationService"
+            android:authorities="com.tencent.qcloud.tim.tuikit.TUIConversation.Init"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.AddMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.FriendProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.NewFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.BlackListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.GroupListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.StartC2CChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.StartGroupChatActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.ForwardSelectGroupActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuicontact.ui.pages.StartGroupMemberSelectActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.tencent.qcloud.tuikit.tuicontact.TUIContactService"
+            android:authorities="com.tencent.qcloud.tim.tuikit.TUIContact.Init"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuichat.ui.page.MessageReplyDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuichat.ui.page.TUIForwardChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuichat.ui.page.TUIC2CChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuichat.ui.page.TUIGroupChatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuichat.ui.page.MessageReceiptDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuichat.component.camera.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuichat.component.imagevideoscan.ImageVideoScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="com.tencent.qcloud.tuikit.tuichat.TUIChatService"
+            android:authorities="com.tencent.qcloud.tim.tuikit.TUIChat.Init"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity android:name="com.tencent.qcloud.tuikit.tuigroup.ui.page.GroupNoticeActivity" />
+        <activity android:name="com.tencent.qcloud.tuikit.tuigroup.ui.page.SetGroupManagerActivity" />
+        <activity android:name="com.tencent.qcloud.tuikit.tuigroup.ui.page.GroupMemberActivity" />
+        <activity android:name="com.tencent.qcloud.tuikit.tuigroup.ui.page.ManageGroupActivity" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuigroup.ui.page.GroupInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuikit.tuigroup.ui.page.GroupApplyManagerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+
+        <provider
+            android:name="com.tencent.qcloud.tuikit.tuigroup.TUIGroupService"
+            android:authorities="com.tencent.qcloud.tim.tuikit.TUIGroup.Init"
+            android:enabled="true"
+            android:exported="false" />
+
+        <activity
+            android:name="com.tencent.qcloud.tuicore.component.activities.SelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.tencent.qcloud.tuicore.util.PermissionRequester$PermissionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:multiprocess="true"
+            android:theme="@style/CoreActivityTranslucent"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+
+        <provider
+            android:name="com.tencent.qcloud.tuicore.ServiceInitializer"
+            android:authorities="com.tencent.qcloud.tim.tuikit.TUICore.Init"
+            android:enabled="true"
+            android:exported="false" />
+        <provider
+            android:name="com.tencent.qcloud.tuicore.util.TUIFileProvider"
+            android:authorities="com.tencent.qcloud.tim.tuikit.tuicore.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+    </application>
+
+</manifest>

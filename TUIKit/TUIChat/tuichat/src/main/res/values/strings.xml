@@ -214,4 +214,6 @@
     <string name="chat_reply_detail">Reply detail</string>
 
     <string name="chat_not_read">Unread</string>
+
+    <string name="order_id">Order ID</string>
 </resources>

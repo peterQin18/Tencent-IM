@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Demo.iml" filepath="$PROJECT_DIR$/.idea/modules/Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Demo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Demo.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Demo.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Demo.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Demo.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Demo.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Demo.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Demo.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.iml" filepath="$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.main.iml" filepath="$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/895220618/Demo.tuichat.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.iml" filepath="$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.main.iml" filepath="$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/826320776/Demo.tuicontact.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.iml" filepath="$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1647056096/Demo.tuiconversation.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.iml" filepath="$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-797246184/Demo.tuicore.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.iml" filepath="$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.main.iml" filepath="$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/1422950568/Demo.tuigroup.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.iml" filepath="$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-984009368/Demo.tuiofflinepush.unitTest.iml" />
+    </modules>
+  </component>
+</project>

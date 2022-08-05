@@ -37,7 +37,7 @@ public class SplashActivity extends BaseLightActivity {
             getWindow().setNavigationBarColor(Color.TRANSPARENT);
         }
 
-        handleData();
+        startMain();
     }
 
     private void handleData() {

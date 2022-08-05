@@ -162,7 +162,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
         mChatPopMenu = new ChatPopMenu(getContext());
         mChatPopMenu.setShowFaces(TUIChatConfigs.getConfigs().getGeneralConfig().isReactEnable());
         mChatPopMenu.setChatPopMenuActionList(mPopActions);
-        mChatPopMenu.setEmojiOnClickListener(new ChatPopMenu.EmojiOnClickListener(){
+        mChatPopMenu.setEmojiOnClickListener(new ChatPopMenu.EmojiOnClickListener() {
 
             @Override
             public void onClick(Emoji emoji) {
@@ -194,7 +194,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
             }
         }
     }
-    
+
     public boolean isDisplayJumpMessageLayout() {
         TUIChatLog.d(TAG, "computeVerticalScrollRange() = " + computeVerticalScrollRange() + ", computeVerticalScrollExtent() = "
                 + computeVerticalScrollExtent() + ", computeVerticalScrollOffset() = " + computeVerticalScrollOffset());
@@ -278,7 +278,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
             forwardAction = new ChatPopMenu.ChatPopMenuAction();
             forwardAction.setActionName(getContext().getString(R.string.forward_button));
             forwardAction.setActionIcon(R.drawable.pop_menu_forward);
-            forwardAction.setActionClickListener(()-> mOnPopActionClickListener.onForwardMessageClick(msg));
+            forwardAction.setActionClickListener(() -> mOnPopActionClickListener.onForwardMessageClick(msg));
         }
 
         if (textIsAllSelected) {
@@ -300,12 +300,12 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
         if (copyAction != null) {
             mPopActions.add(copyAction);
         }
-        if (forwardAction != null) {
-            mPopActions.add(forwardAction);
-        }
-        if (multiSelectAction != null) {
-            mPopActions.add(multiSelectAction);
-        }
+//        if (forwardAction != null) {
+//            mPopActions.add(forwardAction);
+//        }
+//        if (multiSelectAction != null) {
+//            mPopActions.add(multiSelectAction);
+//        }
         if (quoteAction != null && TUIChatConfigs.getConfigs().getGeneralConfig().isQuoteEnable()) {
             mPopActions.add(quoteAction);
         }
@@ -315,9 +315,9 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
         if (revokeAction != null) {
             mPopActions.add(revokeAction);
         }
-        if (deleteAction != null) {
-            mPopActions.add(deleteAction);
-        }
+//        if (deleteAction != null) {
+//            mPopActions.add(deleteAction);
+//        }
         mPopActions.addAll(mMorePopActions);
     }
 
@@ -334,7 +334,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
                         ((MessageAdapter) getAdapter()).showLoading();
                     }
                     mHandler.loadMore(TUIChatConstants.GET_MESSAGE_FORWARD);
-                } else if (isListEnd(lastPosition)){
+                } else if (isListEnd(lastPosition)) {
                     if (getAdapter() instanceof MessageAdapter) {
                         ((MessageAdapter) getAdapter()).showLoading();
                     }
@@ -365,7 +365,7 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
     }
 
     private boolean isListEnd(int lastPosition) {
-       return mHandler.isListEnd(lastPosition);
+        return mHandler.isListEnd(lastPosition);
     }
 
     public void scrollToEnd() {
@@ -791,11 +791,17 @@ public class MessageRecyclerView extends RecyclerView implements IMessageLayout 
 
     public interface OnLoadMoreHandler {
         void loadMore(int type);
+
         boolean isListEnd(int position);
+
         void displayBackToLastMessage(boolean display);
+
         void displayBackToNewMessage(boolean display, String messageId, int count);
+
         void hideBackToAtMessage();
+
         void loadMessageFinish();
+
         void scrollMessageFinish();
     }
 

@@ -9,6 +9,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.ContextCompat;
 
 import com.tencent.qcloud.tuicore.R;
 import com.tencent.qcloud.tuicore.util.ScreenUtil;
@@ -18,14 +19,17 @@ public class UnreadCountTextView extends AppCompatTextView {
 
     private int mNormalSize = ScreenUtil.getPxByDp(18.4f);
     private Paint mPaint;
+    private Context mContext;
 
     public UnreadCountTextView(Context context) {
         super(context);
+        this.mContext = context;
         init();
     }
 
     public UnreadCountTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.mContext = context;
         init();
     }
 
@@ -38,8 +42,8 @@ public class UnreadCountTextView extends AppCompatTextView {
         mPaint = new Paint();
         mPaint.setColor(getResources().getColor(R.color.read_dot_bg));
         mPaint.setAntiAlias(true);
-        setTextColor(Color.WHITE);
-        setTextSize(TypedValue.COMPLEX_UNIT_SP, 13.6f);
+        setTextColor(ContextCompat.getColor(mContext, R.color.color_6F40EE));
+        setTextSize(TypedValue.COMPLEX_UNIT_SP, 10.0f);
     }
 
     public void setPaintColor(int color) {

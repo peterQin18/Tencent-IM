@@ -10,10 +10,13 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.tencent.imsdk.relationship.UserInfo;
 import com.tencent.imsdk.v2.V2TIMConversation;
+import com.tencent.imsdk.v2.V2TIMGroupManager;
 import com.tencent.qcloud.tuicore.TUIConstants;
 import com.tencent.qcloud.tuicore.TUICore;
 import com.tencent.qcloud.tuicore.component.interfaces.IUIKitCallback;
@@ -44,6 +47,8 @@ public class TUIConversationFragment extends BaseFragment {
     private List<PopMenuAction> mConversationPopActions = new ArrayList<>();
 
     private ConversationPresenter presenter;
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -55,7 +60,6 @@ public class TUIConversationFragment extends BaseFragment {
     private void initView() {
         // 从布局文件中获取会话列表面板
         mConversationLayout = mBaseView.findViewById(R.id.conversation_layout);
-
         presenter = new ConversationPresenter();
         presenter.setConversationListener();
         mConversationLayout.setPresenter(presenter);
@@ -84,9 +88,8 @@ public class TUIConversationFragment extends BaseFragment {
     }
 
 
-
     public void restoreConversationItemBackground() {
-        if (mConversationLayout.getConversationList().getAdapter() !=  null &&
+        if (mConversationLayout.getConversationList().getAdapter() != null &&
                 mConversationLayout.getConversationList().getAdapter().isClick()) {
             mConversationLayout.getConversationList().getAdapter().setClick(false);
             mConversationLayout.getConversationList().getAdapter().notifyItemChanged(mConversationLayout.getConversationList().getAdapter().getCurrentPosition());
@@ -141,7 +144,8 @@ public class TUIConversationFragment extends BaseFragment {
 
     /**
      * 长按会话item弹框
-     * @param view 长按 view
+     *
+     * @param view             长按 view
      * @param conversationInfo 会话数据对象
      */
     private void showItemPopMenu(View view, final ConversationInfo conversationInfo) {
@@ -187,7 +191,7 @@ public class TUIConversationFragment extends BaseFragment {
             }
         });
         int x = view.getWidth() / 2;
-        int y = - view.getHeight() / 3;
+        int y = -view.getHeight() / 3;
         int popHeight = ScreenUtil.dip2px(45) * 3;
         if (y + popHeight + view.getY() + view.getHeight() > mConversationLayout.getBottom()) {
             y = y - popHeight;
@@ -195,26 +199,32 @@ public class TUIConversationFragment extends BaseFragment {
         mConversationPopWindow.showAsDropDown(view, x, y, Gravity.TOP | Gravity.START);
     }
 
+
     private void startChatActivity(ConversationInfo conversationInfo) {
         Bundle param = new Bundle();
+        // 单聊还是群聊
         param.putInt(TUIConstants.TUIChat.CHAT_TYPE, conversationInfo.isGroup() ? V2TIMConversation.V2TIM_GROUP : V2TIMConversation.V2TIM_C2C);
+        // 房间Id
         param.putString(TUIConstants.TUIChat.CHAT_ID, conversationInfo.getId());
+        // 显示在 toolbar 上的内容，这里我们需要修改
         param.putString(TUIConstants.TUIChat.CHAT_NAME, conversationInfo.getTitle());
+        // 草稿内容 和 时间
         if (conversationInfo.getDraft() != null) {
             param.putString(TUIConstants.TUIChat.DRAFT_TEXT, conversationInfo.getDraft().getDraftText());
             param.putLong(TUIConstants.TUIChat.DRAFT_TIME, conversationInfo.getDraft().getDraftTime());
         }
         param.putBoolean(TUIConstants.TUIChat.IS_TOP_CHAT, conversationInfo.isTop());
         param.putString(TUIConstants.TUIChat.FACE_URL, conversationInfo.getIconPath());
+        // 群聊，需要携带 会话人的list
         if (conversationInfo.isGroup()) {
             param.putString(TUIConstants.TUIChat.GROUP_TYPE, conversationInfo.getGroupType());
             param.putSerializable(TUIConstants.TUIChat.AT_INFO_LIST, (Serializable) conversationInfo.getGroupAtInfoList());
         }
+        // 根据类型跳转 群聊/单聊
         if (conversationInfo.isGroup()) {
             TUICore.startActivity(TUIConstants.TUIChat.GROUP_CHAT_ACTIVITY_NAME, param);
         } else {
             TUICore.startActivity(TUIConstants.TUIChat.C2C_CHAT_ACTIVITY_NAME, param);
         }
     }
-
 }

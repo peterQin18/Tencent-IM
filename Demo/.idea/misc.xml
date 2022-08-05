@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/custom_preview.xml" value="0.12110552763819095" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/drawable/chat_react_bg.xml" value="0.1235" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/drawable/msg_left_bubble.xml" value="0.1" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/drawable/msg_right_bubble.xml" value="0.1" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/drawable/order_background.xml" value="0.147" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/drawable/quote_message_area_bg.xml" value="0.1235" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_activity.xml" value="0.2826086956521739" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_flow_react_item_layout.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_fragment.xml" value="0.3125" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_input_layout.xml" value="0.3233695652173913" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_inputmore_fragment.xml" value="0.2717391304347826" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_inputmore_layout.xml" value="0.2717391304347826" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_layout.xml" value="0.3233695652173913" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_menu_recent_face_item_layout.xml" value="0.26458333333333334" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/chat_pop_menu_layout.xml" value="0.26458333333333334" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/forward_chat_layout.xml" value="0.2721311475409836" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/message_adapter_content_text.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/message_adapter_item_content.xml" value="0.3125" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/message_adapter_item_empty.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/msg_receipt_detail_layout.xml" value="0.3125" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/notice_layout.xml" value="0.2826086956521739" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/quote_message_content_layout.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUIChat/tuichat/src/main/res/layout/test_custom_message_layout1.xml" value="0.21875" />
+        <entry key="../TUIKit/TUIConversation/tuiconversation/src/main/res/layout/conversation_custom_adapter.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUIConversation/tuiconversation/src/main/res/layout/conversation_forward_select_adapter.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUIConversation/tuiconversation/src/main/res/layout/conversation_fragment.xml" value="0.20677083333333332" />
+        <entry key="../TUIKit/TUIConversation/tuiconversation/src/main/res/layout/conversation_list_item_layout.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUIConversation/tuiconversation/src/main/res/layout/loading_progress_bar.xml" value="0.34427083333333336" />
+        <entry key="../TUIKit/TUICore/tuicore/src/main/res-light/drawable/core_title_bar_bg_light.xml" value="0.1" />
+        <entry key="../TUIKit/TUICore/tuicore/src/main/res-lively/drawable/core_title_bar_bg_lively.xml" value="0.1" />
+        <entry key="../TUIKit/TUICore/tuicore/src/main/res/layout/core_select_item_layout.xml" value="0.10267406659939456" />
+        <entry key="../TUIKit/TUICore/tuicore/src/main/res/layout/permission_activity_layout.xml" value="0.13405797101449277" />
+        <entry key="../TUIKit/TUICore/tuicore/src/main/res/layout/tuicore_selection_activity.xml" value="0.10267406659939456" />
+        <entry key="../TUIKit/TUIGroup/tuigroup/src/main/res/layout/activity_group_notice.xml" value="0.24479166666666666" />
+        <entry key="../TUIKit/TUIGroup/tuigroup/src/main/res/layout/group_member_layout.xml" value="0.24479166666666666" />
+        <entry key="app/src/main/res/layout/main_activity.xml" value="0.20677083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

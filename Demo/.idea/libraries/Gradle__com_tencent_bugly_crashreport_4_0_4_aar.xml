@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tencent.bugly:crashreport:4.0.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/54f579fb31d5b5ac85154d065dd15a60/crashreport-4.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1586d6c3eda3b6893ecb01593359f128/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bc820d244dd5f46d59cd943687faf4a3/transformed/jetified-crashreport-4.0.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1586d6c3eda3b6893ecb01593359f128/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1586d6c3eda3b6893ecb01593359f128/jars/libs/bugly_crash_release.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1586d6c3eda3b6893ecb01593359f128/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.bugly/crashreport/4.0.4/23dd093129cb74f256cd0f2c210b831896317069/crashreport-4.0.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.bugly/crashreport/4.0.4/23dd093129cb74f256cd0f2c210b831896317069/crashreport-4.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

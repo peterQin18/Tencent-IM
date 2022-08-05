@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
@@ -12,54 +10,181 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight = "1"/>
+        android:layout_weight="1" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ff0000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="40dp">
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#00ff00"
+            android:gravity="center"
+            android:text="登入"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="登出"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="40dp">
+
+        <TextView
+            android:id="@+id/create_group"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="创建群"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/send_custom_msg"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="自定义消息"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/send_normal_msg"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="普通消息"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="40dp">
+
+        <TextView
+            android:id="@+id/invite_group_member"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="拉人"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/change_order_status"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="改变状态"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/finish_group_chat"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:background="#ff0000"
+            android:gravity="center"
+            android:text="结束会话"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:background="?attr/demo_navigate_bar_bg"
         android:clipChildren="false"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <RelativeLayout
             android:id="@+id/conversation_btn_group"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="tabClick"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:onClick="tabClick">
 
             <ImageView
                 android:id="@+id/tab_conversation_icon"
-                android:background="?attr/demo_main_tab_conversation_selected_bg"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
-                android:layout_width="32dp"
-                android:layout_height="32dp"/>
+                android:background="?attr/demo_main_tab_conversation_selected_bg" />
 
             <TextView
                 android:id="@+id/conversation"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
                 android:layout_below="@id/tab_conversation_icon"
-                android:textColor="?attr/demo_main_tab_selected_text_color"
+                android:layout_centerInParent="true"
                 android:gravity="center"
-                android:textSize="12sp"
-                android:text="@string/tab_conversation_tab_text" />
+                android:text="@string/tab_conversation_tab_text"
+                android:textColor="?attr/demo_main_tab_selected_text_color"
+                android:textSize="12sp" />
 
             <com.tencent.qcloud.tuicore.component.UnreadCountTextView
                 android:id="@+id/msg_total_unread"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@id/conversation"
-                android:layout_marginTop="1dp"
                 android:layout_marginStart="-17dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/conversation"
                 android:gravity="center"
                 android:includeFontPadding="false"
                 android:minWidth="18.4dp"
@@ -73,16 +198,16 @@
             android:id="@+id/contact_btn_group"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="tabClick"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:onClick="tabClick">
 
             <ImageView
                 android:id="@+id/tab_contact_icon"
-                android:background="?attr/demo_main_tab_contact_normal_bg"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
-                android:layout_width="32dp"
-                android:layout_height="32dp"/>
+                android:background="?attr/demo_main_tab_contact_normal_bg" />
 
             <TextView
                 android:id="@+id/contact"
@@ -90,19 +215,19 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tab_contact_icon"
                 android:layout_centerInParent="true"
-                android:textColor="?attr/demo_main_tab_normal_text_color"
                 android:gravity="center"
-                android:textSize="12sp"
-                android:text="@string/tab_contact_tab_text" />
+                android:text="@string/tab_contact_tab_text"
+                android:textColor="?attr/demo_main_tab_normal_text_color"
+                android:textSize="12sp" />
 
             <com.tencent.qcloud.tuicore.component.UnreadCountTextView
                 android:id="@+id/new_friend_total_unread"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@id/contact"
-                android:layout_marginTop="1dp"
                 android:layout_marginStart="-8dp"
+                android:layout_marginTop="1dp"
+                android:layout_toEndOf="@id/contact"
                 android:gravity="center"
                 android:includeFontPadding="false"
                 android:minWidth="18.4dp"
@@ -115,16 +240,16 @@
             android:id="@+id/myself_btn_group"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="tabClick"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:onClick="tabClick">
 
             <ImageView
                 android:id="@+id/tab_profile_icon"
-                android:background="?attr/demo_main_tab_profile_normal_bg"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="8dp"
-                android:layout_width="32dp"
-                android:layout_height="32dp"/>
+                android:background="?attr/demo_main_tab_profile_normal_bg" />
 
             <TextView
                 android:id="@+id/mine"
@@ -132,10 +257,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tab_profile_icon"
                 android:layout_centerInParent="true"
-                android:textColor="?attr/demo_main_tab_normal_text_color"
-                android:textSize="12sp"
                 android:gravity="center"
-                android:text="@string/tab_profile_tab_text" />
+                android:text="@string/tab_profile_tab_text"
+                android:textColor="?attr/demo_main_tab_normal_text_color"
+                android:textSize="12sp" />
 
         </RelativeLayout>
     </LinearLayout>

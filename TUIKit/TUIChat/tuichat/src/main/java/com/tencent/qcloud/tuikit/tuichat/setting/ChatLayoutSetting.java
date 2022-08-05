@@ -1,14 +1,24 @@
 package com.tencent.qcloud.tuikit.tuichat.setting;
 
 import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import com.google.gson.Gson;
+import com.tencent.qcloud.tuicore.util.ToastUtil;
 import com.tencent.qcloud.tuikit.tuichat.R;
 import com.tencent.qcloud.tuikit.tuichat.TUIChatConstants;
 import com.tencent.qcloud.tuikit.tuichat.bean.CustomHelloMessage;
 import com.tencent.qcloud.tuikit.tuichat.bean.InputMoreActionUnit;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.TUIMessageBean;
 import com.tencent.qcloud.tuikit.tuichat.ui.view.ChatView;
+import com.tencent.qcloud.tuikit.tuichat.ui.view.input.BaseInputFragment;
 import com.tencent.qcloud.tuikit.tuichat.ui.view.input.InputView;
 import com.tencent.qcloud.tuikit.tuichat.ui.view.message.MessageRecyclerView;
 import com.tencent.qcloud.tuikit.tuichat.util.ChatMessageBuilder;
@@ -66,9 +76,9 @@ public class ChatLayoutSetting {
 //
 //        ////// 设置气泡 ///////
 //        // 设置自己聊天气泡的背景
-//        messageRecyclerView.setRightBubble(new ColorDrawable(0xFFCCE4FC));
+        messageRecyclerView.setRightBubble(ContextCompat.getDrawable(mContext, R.drawable.msg_right_bubble));
 //        // 设置朋友聊天气泡的背景
-//        messageRecyclerView.setLeftBubble(new ColorDrawable(0xFFE4E7EB));
+        messageRecyclerView.setLeftBubble(ContextCompat.getDrawable(mContext, R.drawable.msg_left_bubble));
 //
 //        ////// 设置聊天内容 //////
 //        // 设置聊天内容字体字体大小，朋友和自己用一种字体大小
@@ -152,24 +162,24 @@ public class ChatLayoutSetting {
 
         // TODO 可以自己增加一些功能，可以打开下面代码测试
         // 增加一个欢迎提示富文本
-        InputMoreActionUnit unit = new InputMoreActionUnit() {};
-        unit.setIconResId(R.drawable.custom);
-        unit.setTitleId(R.string.test_custom_action);
-        unit.setActionId(CustomHelloMessage.CUSTOM_HELLO_ACTION_ID);
-        unit.setPriority(10);
-        unit.setOnClickListener(unit.new OnActionClickListener() {
-            @Override
-            public void onClick() {
-                Gson gson = new Gson();
-                CustomHelloMessage customHelloMessage = new CustomHelloMessage();
-                customHelloMessage.version = TUIChatConstants.version;
-
-                String data = gson.toJson(customHelloMessage);
-                TUIMessageBean info = ChatMessageBuilder.buildCustomMessage(data, customHelloMessage.text, customHelloMessage.text.getBytes());
-                layout.sendMessage(info, false);
-            }
-        });
-        inputView.addAction(unit);
+//        InputMoreActionUnit unit = new InputMoreActionUnit() {};
+//        unit.setIconResId(R.drawable.custom);
+//        unit.setTitleId(R.string.test_custom_action);
+//        unit.setActionId(CustomHelloMessage.CUSTOM_HELLO_ACTION_ID);
+//        unit.setPriority(10);
+//        unit.setOnClickListener(unit.new OnActionClickListener() {
+//            @Override
+//            public void onClick() {
+//                Gson gson = new Gson();
+//                CustomHelloMessage customHelloMessage = new CustomHelloMessage();
+//                customHelloMessage.version = TUIChatConstants.version;
+//
+//                String data = gson.toJson(customHelloMessage);
+//                TUIMessageBean info = ChatMessageBuilder.buildCustomMessage(data, customHelloMessage.text, customHelloMessage.text.getBytes());
+//                layout.sendMessage(info, false);
+//            }
+//        });
+//        inputView.addAction(unit);
     }
 
 //    public static class CustomInputFragment extends BaseInputFragment {
@@ -207,7 +217,7 @@ public class ChatLayoutSetting {
 //            });
 //            return baseView;
 //        }
-
+//
 //    }
 
 }

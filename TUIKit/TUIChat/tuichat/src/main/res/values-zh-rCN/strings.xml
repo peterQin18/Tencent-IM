@@ -213,4 +213,6 @@
     <string name="chat_reply_detail">回复详情</string>
 
     <string name="chat_not_read">尚未阅读</string>
+
+    <string name="order_id">Order ID</string>
 </resources>

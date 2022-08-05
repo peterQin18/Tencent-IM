@@ -4,11 +4,42 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="买方提交付款证明"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="买方提交付款证明真实有效"/>
+    </LinearLayout>
+
     <TextView
         android:id="@+id/test_custom_message_tv"
         android:textColor="?attr/chat_self_custom_msg_text_color"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:text="我是自定义消息" />
 
     <TextView
         android:id="@+id/link_tv"

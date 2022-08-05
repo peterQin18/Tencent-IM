@@ -45,11 +45,11 @@
 
         <com.tencent.qcloud.tuicore.component.gatherimage.UserIconView
             android:id="@+id/left_user_icon_view"
-            android:layout_width="41dp"
-            android:layout_height="41dp"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="11.52dp"
+            android:layout_marginRight="10dp"
             android:visibility="gone"
             app:default_image="?attr/core_default_user_icon"
             app:image_radius="20dp"
@@ -59,8 +59,8 @@
             android:id="@+id/right_user_icon_view"
             android:layout_width="41dp"
             android:layout_height="41dp"
-            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
             android:layout_marginLeft="11.52dp"
             android:visibility="gone"
             app:default_image="?attr/core_default_user_icon"
@@ -73,8 +73,8 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="3.84dp"
             android:layout_toRightOf="@id/left_user_icon_view"
-            android:textColor="@color/text_tips_color"
-            android:textSize="12.6sp"
+            android:textColor="@color/color_434B5F"
+            android:textSize="10sp"
             android:visibility="gone"
             tools:text="Leo"
             tools:visibility="visible" />
@@ -100,7 +100,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/user_name_tv"
-            android:layout_toLeftOf="@id/right_user_icon_view"
+            android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/left_user_icon_view"
 
             android:orientation="horizontal">
@@ -127,14 +127,14 @@
                 android:layout_gravity="bottom"
                 android:layout_marginRight="6dp"
                 android:layout_marginBottom="2.88dp"
-                android:textColor="@color/text_gray1"
-                android:textSize="11sp"
+                android:textColor="@color/color_969BA6"
+                android:textSize="10sp"
                 tools:text="read" />
 
             <ImageView
                 android:id="@+id/message_status_iv"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"

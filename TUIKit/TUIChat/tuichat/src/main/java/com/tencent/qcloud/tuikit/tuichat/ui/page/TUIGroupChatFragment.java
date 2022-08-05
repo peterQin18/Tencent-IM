@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 
+import com.tencent.imsdk.v2.V2TIMGroupManager;
+import com.tencent.imsdk.v2.V2TIMManager;
 import com.tencent.imsdk.v2.V2TIMMessage;
 import com.tencent.qcloud.tuicore.TUIConstants;
 import com.tencent.qcloud.tuicore.TUICore;
@@ -16,6 +18,7 @@ import com.tencent.qcloud.tuikit.tuichat.bean.GroupInfo;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.TUIMessageBean;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.TextMessageBean;
 import com.tencent.qcloud.tuikit.tuichat.presenter.GroupChatPresenter;
+import com.tencent.qcloud.tuikit.tuichat.setting.ChatLayoutSetting;
 import com.tencent.qcloud.tuikit.tuichat.ui.interfaces.OnItemClickListener;
 import com.tencent.qcloud.tuikit.tuichat.util.ChatMessageParser;
 import com.tencent.qcloud.tuikit.tuichat.util.TUIChatLog;
@@ -42,6 +45,9 @@ public class TUIGroupChatFragment extends TUIBaseChatFragment {
         }
 
         initView();
+        // TODO 通过api设置ChatLayout各种属性的样例
+        ChatLayoutSetting helper = new ChatLayoutSetting(getActivity());
+        helper.customizeChatLayout(chatView);
         return baseView;
     }
 

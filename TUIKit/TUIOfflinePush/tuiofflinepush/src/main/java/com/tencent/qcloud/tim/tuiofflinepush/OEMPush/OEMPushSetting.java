@@ -101,26 +101,26 @@ public class OEMPushSetting implements PushSettingInterface{
                HeytapPushManager.requestNotificationPermission();
            }
        } else if (BrandUtil.isGoogleServiceSupport()) {
-            FirebaseInstanceId.getInstance().getInstanceId()
-                    .addOnCompleteListener(new com.google.android.gms.tasks.OnCompleteListener<InstanceIdResult>() {
-                        @Override
-                        public void onComplete(Task<InstanceIdResult> task) {
-                            if (!task.isSuccessful()) {
-                                TUIOfflinePushLog.w(TAG, "getInstanceId failed exception = " + task.getException());
-                                return;
-                            }
-
-                            // Get new Instance ID token
-                            String token = task.getResult().getToken();
-                            TUIOfflinePushLog.i(TAG, "google fcm getToken = " + token);
-
-                            if (mPushCallback != null) {
-                                mPushCallback.onTokenCallback(token);
-                            } else {
-                                TUIOfflinePushLog.e(TAG, "mPushCallback is null");
-                            }
-                        }
-                    });
+//            FirebaseInstanceId.getInstance().getInstanceId()
+//                    .addOnCompleteListener(new com.google.android.gms.tasks.OnCompleteListener<InstanceIdResult>() {
+//                        @Override
+//                        public void onComplete(Task<InstanceIdResult> task) {
+//                            if (!task.isSuccessful()) {
+//                                TUIOfflinePushLog.w(TAG, "getInstanceId failed exception = " + task.getException());
+//                                return;
+//                            }
+//
+//                            // Get new Instance ID token
+//                            String token = task.getResult().getToken();
+//                            TUIOfflinePushLog.i(TAG, "google fcm getToken = " + token);
+//
+//                            if (mPushCallback != null) {
+//                                mPushCallback.onTokenCallback(token);
+//                            } else {
+//                                TUIOfflinePushLog.e(TAG, "mPushCallback is null");
+//                            }
+//                        }
+//                    });
         }
     }
 

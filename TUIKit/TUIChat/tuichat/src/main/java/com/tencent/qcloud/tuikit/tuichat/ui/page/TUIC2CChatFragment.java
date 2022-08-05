@@ -11,6 +11,7 @@ import com.tencent.qcloud.tuicore.TUIConstants;
 import com.tencent.qcloud.tuikit.tuichat.presenter.C2CChatPresenter;
 import com.tencent.qcloud.tuikit.tuichat.bean.ChatInfo;
 import com.tencent.qcloud.tuikit.tuichat.TUIChatConstants;
+import com.tencent.qcloud.tuikit.tuichat.setting.ChatLayoutSetting;
 import com.tencent.qcloud.tuikit.tuichat.util.TUIChatLog;
 import com.tencent.qcloud.tuicore.TUICore;
 
@@ -35,7 +36,9 @@ public class TUIC2CChatFragment extends TUIBaseChatFragment {
         }
 
         initView();
-
+//        // TODO 通过api设置ChatLayout各种属性的样例
+        ChatLayoutSetting helper = new ChatLayoutSetting(getActivity());
+        helper.customizeChatLayout(chatView);
         return baseView;
     }
 

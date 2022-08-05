@@ -13,6 +13,7 @@ import com.tencent.qcloud.tuicore.TUICore;
 import com.tencent.qcloud.tuicore.util.TUIBuild;
 
 import java.util.Locale;
+import java.util.Random;
 
 
 public class TUIUtils {
@@ -55,6 +56,20 @@ public class TUIUtils {
             DemoLog.e(TAG, "getCurrentVersionCode exception= " + ignored);
         }
         return 0;
+    }
+
+    private static int getRandom(int min, int max) {
+        if (min > max) {
+            return 0;
+        }
+        if (min == max) {
+            return min;
+        }
+        return min + new Random().nextInt(max - min);
+    }
+
+    public static int getRandom(int max) {
+        return getRandom(0, max);
     }
 
 }

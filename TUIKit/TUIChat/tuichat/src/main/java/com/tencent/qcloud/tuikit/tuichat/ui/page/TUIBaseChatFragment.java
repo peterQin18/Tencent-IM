@@ -25,6 +25,7 @@ import com.tencent.qcloud.tuikit.tuichat.bean.message.TUIMessageBean;
 import com.tencent.qcloud.tuikit.tuichat.bean.message.TextMessageBean;
 import com.tencent.qcloud.tuikit.tuichat.component.AudioPlayer;
 import com.tencent.qcloud.tuikit.tuichat.presenter.ChatPresenter;
+import com.tencent.qcloud.tuikit.tuichat.setting.ChatLayoutSetting;
 import com.tencent.qcloud.tuikit.tuichat.ui.interfaces.OnItemClickListener;
 import com.tencent.qcloud.tuikit.tuichat.ui.view.ChatView;
 import com.tencent.qcloud.tuikit.tuichat.ui.view.input.InputView;
@@ -58,11 +59,6 @@ public class TUIBaseChatFragment extends BaseFragment {
         if (bundle == null) {
             return baseView;
         }
-
-//        // TODO 通过api设置ChatLayout各种属性的样例
-//        ChatLayoutSetting helper = new ChatLayoutSetting(getActivity());
-//        helper.setGroupId(mChatInfo.getId());
-//        helper.customizeChatLayout(mChatLayout);
         return baseView;
     }
 
